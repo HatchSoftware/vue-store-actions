@@ -8,7 +8,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [dts({ tsconfigPath: './tsconfig.app.json', rollupTypes: true }), eslint()],
+    plugins: [
+        dts({
+            tsconfigPath: './tsconfig.app.json',
+            rollupTypes: true,
+        }),
+        eslint(),
+    ],
     build: {
         lib: {
             entry: {
